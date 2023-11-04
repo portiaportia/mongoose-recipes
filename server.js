@@ -9,11 +9,16 @@ app.use(cors());
 const mongoose = require("mongoose");
 
 const upload = multer({ dest: __dirname + "/public/images" });
+//Z2Ju@hNJn@$pA9z
+mongoose.connect('mongodb+srv://portiaportia:Z2Ju%40hNJn%40$pA9z@data.ng58qmq.mongodb.net/')
+    .then(() => { console.log("connected to mongodb") })
+    .catch(error => console.log("couldn't connect to mongodb.", error));
 
+/*
 mongoose.connect('mongodb://localhost:27018/recipes')
     .then(() => { console.log("connected to mongodb") })
     .catch(error => console.log("couldn't connect to mongodb.", err));
-
+*/
 const recipeSchema = new mongoose.Schema({
     name: String,
     description: String,
