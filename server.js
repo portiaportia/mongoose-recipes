@@ -127,6 +127,7 @@ const updateRecipe = async (req, res) => {
     }
   );
 
+  const recipe = await Recipe.findById(req.params.id);
   res.send(result);
 };
 
